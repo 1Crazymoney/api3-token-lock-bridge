@@ -1,0 +1,25 @@
+{
+  "name": "api3-token-lock-external-bridge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.12.4",
+    "dotenv": "^10.0.0",
+    "ethers": "^5.3.1",
+    "serverless-plugin-typescript": "1.1.7",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "clean": "rimraf -rf ./dist",
+    "compile": "tsc -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

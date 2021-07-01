@@ -1,0 +1,30 @@
+service:
+  name: bridge-events
+
+plugins:
+  - serverless-plugin-typescript
+
+
+provider:
+  name: aws
+  region: ${opt:region}
+  stage: ${opt:stage}
+  runtime: nodejs14.x
+  memorySize: 256
+  logRetentionInDays: 14
+  environment: ${file(security.json)}
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action: 'lambda:InvokeFunction'
+      Resource: '*'
+
+package: 
+  individually: true
+  
+functions:
+  bridgeEvents:
+    handler: ./src/index.bridgeEvents
+    timeout: 30
+    reservedConcurrency: 1
+    events:
+      - schedule: rate(1 minute)

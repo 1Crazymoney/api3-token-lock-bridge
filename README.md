@@ -67,7 +67,7 @@ Populate `src/config.json` with the network configurations for `API3Authorizer.s
 
 ### Deployment
 
-After `security.json` is created and `config.json` is populated, execute:
+After configurations for `security.json` and `config.json` are set, execute:
 ```
 serverless deploy --region $REGION --stage $STAGE
 ```

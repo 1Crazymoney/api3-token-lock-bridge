@@ -20,6 +20,8 @@ cd api3-token-lock-external-bridge
 npm install
 ```
 
+---
+
 Create `security.json` in the default directory. The file stores the environment variables, used to run the application
 ```json
 {
@@ -29,13 +31,13 @@ Create `security.json` in the default directory. The file stores the environment
 }
 ```
 
-where:
-
 `BLOCKS_BEHIND` - How many blocks before the current block will be queried.
 
 `TOKEN_LOCK_EXTERNAL_PROVIDER` - The JSON-RPC provider of the network on which `API3TokenLockExternal.sol` is deployed.
 
 `TOKEN_LOCK_EXTERNAL_CONTRACT_ADDRESS` - The address of the `API3TokenLockExternal.sol`.
+
+---
 
 Populate `src/config.json` with the network configurations for `API3Authorizer.sol` on the different networks:
 
@@ -50,7 +52,6 @@ Populate `src/config.json` with the network configurations for `API3Authorizer.s
   ...
 ]
 ```
-where:
 
 `api3Authorizer` - The address of the `API3Authorizer.sol`.
 
@@ -60,7 +61,7 @@ where:
 
 `provider` - The JSON-RPC provider to the target chain.
 
-### Deploy
+### Deployment
 
 After `security.json` is created and `config.json` is populated, execute:
 ```

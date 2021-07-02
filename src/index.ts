@@ -61,7 +61,11 @@ async function executeEvents(configs: NetworkConfiguration[], events: AuthorizeE
       continue;
     }
 
-    // Execute setWhitelistExpiration
-    await contract.setWhitelistExpiration(log.airnodeId, log.clientAddress, log.expiration, { nonce: networkConfig.transactionCount++ });
+    try {
+      // Execute setWhitelistExpiration
+      await contract.setWhitelistExpiration(log.airnodeId, log.clientAddress, log.expiration, { nonce: networkConfig.transactionCount++, gasPrice: networkConfig.gasPrice });
+    } catch (err) {
+      console.error(err);
+    }
   }
 }

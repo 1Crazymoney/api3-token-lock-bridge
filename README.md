@@ -47,6 +47,7 @@ Populate `src/config.json` with the network configurations for `API3Authorizer.s
   {
     "api3Authorizer": "",
     "chainId": 0,
+    "gasPrice": 0,
     "privateKey": "",
     "provider": ""
   },
@@ -57,6 +58,8 @@ Populate `src/config.json` with the network configurations for `API3Authorizer.s
 `api3Authorizer` - The address of the `API3Authorizer.sol`.
 
 `chainId` - The chain id on which `API3Authorizer.sol` is deployed.
+
+`gasPrice` (optional) - The gas price in `wei`, used for whitelisting transactions.
 
 `privateKey` - The private key, which is a super admin in `API3Authorizer.sol`.
 

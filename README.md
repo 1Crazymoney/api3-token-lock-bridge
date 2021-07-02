@@ -26,16 +26,17 @@ Create `security.json` in the default directory. The file stores the environment
 ```json
 {
   "BLOCKS_BEHIND": "",
-  "TOKEN_LOCK_EXTERNAL_PROVIDER": "",
-  "TOKEN_LOCK_EXTERNAL_CONTRACT_ADDRESS": ""
+  "TOKEN_LOCK_EXTERNAL_CONTRACT_ADDRESS": "",
+  "TOKEN_LOCK_EXTERNAL_PROVIDER": ""
 }
 ```
 
 `BLOCKS_BEHIND` - How many blocks before the current block will be queried.
 
+`TOKEN_LOCK_EXTERNAL_CONTRACT_ADDRESS` - The address of the `API3TokenLockExternal.sol`.
+
 `TOKEN_LOCK_EXTERNAL_PROVIDER` - The JSON-RPC provider of the network on which `API3TokenLockExternal.sol` is deployed.
 
-`TOKEN_LOCK_EXTERNAL_CONTRACT_ADDRESS` - The address of the `API3TokenLockExternal.sol`.
 
 ---
 
@@ -45,8 +46,8 @@ Populate `src/config.json` with the network configurations for `API3Authorizer.s
 [
   {
     "api3Authorizer": "",
-    "privateKey": "",
     "chainId": 0,
+    "privateKey": "",
     "provider": ""
   },
   ...
@@ -55,9 +56,9 @@ Populate `src/config.json` with the network configurations for `API3Authorizer.s
 
 `api3Authorizer` - The address of the `API3Authorizer.sol`.
 
-`privateKey` - The private key, which is a super admin in `API3Authorizer.sol`.
-
 `chainId` - The chain id on which `API3Authorizer.sol` is deployed.
+
+`privateKey` - The private key, which is a super admin in `API3Authorizer.sol`.
 
 `provider` - The JSON-RPC provider to the target chain.
 

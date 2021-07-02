@@ -1,5 +1,7 @@
 # API3 Token Lock External Bridge
-
+A TypeScript serverless function, triggered periodically to filter the latest N blocks for
+Authorization events from `API3TokenLockExternal.sol`, each of which has data about a client whitelisting on a given side-chain.
+Based on the event log data, the function executes a client whitelisting transaction to a `API3Authorizer.sol`, which is deployed on a specific side-chain.
 
 ## How to run?
 

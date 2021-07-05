@@ -102,3 +102,15 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Serverless environmental variables
+security.json
+
+# Build
+.build
+
+# OS generated files
+.DS_STORE
+
+# JetBrains
+.idea
